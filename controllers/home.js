@@ -1,8 +1,14 @@
-const router = require('express').Router();
+const express = require('express');
 
-module.exports = () => {
-  router.get('/', (req, res, next) => {
-    res.send('alive');
+module.exports = (httpService) => {
+  const router = express.Router();
+
+  router.get('/proxy/:url', (req, res, next) => {
+    const url = req.params.url;
+
+    return httpService.get(url)
+      .then((response) => res.send(response.data))
+      .catch(next);
   });
 
   return router;

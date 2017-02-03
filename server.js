@@ -1,8 +1,9 @@
 const expressApp = require('./express-app')();
-const homeController = require('./controllers/home')();
+const httpService = require('./services/http-service')();
+const homeController = require('./controllers/home')(httpService);
 
-expressApp.get('/', homeController);
+expressApp.use('/', homeController);
 
 expressApp.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('Proxy listening on port 3000!')
 });
