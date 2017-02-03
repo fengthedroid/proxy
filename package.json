@@ -1,0 +1,23 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengthedroid/proxy.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fengthedroid/proxy/issues"
+  },
+  "homepage": "https://github.com/fengthedroid/proxy#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
